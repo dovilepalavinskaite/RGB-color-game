@@ -16,6 +16,7 @@ colorDisplay.textContent = pickedColor;
 easyBtn.addEventListener("click", function(){
 	easyBtn.classList.add("selected");
 	hardBtn.classList.remove("selected");
+	messageDisplay.textContent = "Hey, guess the color!";
 	numSquares = 3;
 	colors = generateRandomColors(numSquares);
 	pickedColor = pickColor();
@@ -32,6 +33,7 @@ easyBtn.addEventListener("click", function(){
 hardBtn.addEventListener("click", function(){
 	hardBtn.classList.add("selected");
 	easyBtn.classList.remove("selected");
+	messageDisplay.textContent = "Hey, guess the color!";
 	numSquares = 6
 	colors = generateRandomColors(numSquares);
 	pickedColor = pickColor();
@@ -47,6 +49,7 @@ hardBtn.addEventListener("click", function(){
 resetButton.addEventListener("click", function(){
 // generate new colors
 	colors = generateRandomColors(numSquares);
+	messageDisplay.textContent = "Hey, guess the color!";
 // pick a new random color from array
 	pickedColor = pickColor();
 // change colors of square
@@ -79,7 +82,7 @@ for (var i = 0; i<squares.length; i++){
 	});
 }
 
-//COLOR CHANGES WHEN CHOSEN COLER IS PICKED
+//COLOR CHANGES WHEN CHOSEN COLOR IS PICKED
 function changeColor (color){
 	for (var i = 0; i<squares.length; i++){
 		squares[i].style.backgroundColor = color;
